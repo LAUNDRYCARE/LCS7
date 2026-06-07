@@ -1,11 +1,11 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import Services from "@/components/Services";
-import Care from "@/components/Care";
-import Testimonials from "@/components/Testimonials";
-import Footer from "@/components/Footer";
-import FAQ from "@/components/FAQ";
+import Hero from "@/sections/Hero";
+import Stats from "@/sections/Stats";
+import Services from "@/sections/Services";
+import Care from "@/sections/Care";
+import Testimonials from "@/sections/Testimonials";
+import Footer from "@/sections/Footer";
+import FAQ from "@/sections/FAQ";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
