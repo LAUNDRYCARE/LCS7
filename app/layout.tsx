@@ -1,20 +1,42 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Laundry Care+ | Lebih Dari Sekadar Bersih",
-  description: "Laundry Care+ menghadirkan layanan laundry dengan hasil bersih, wangi, rapi, dan tepat waktu. Tersedia layanan antar jemput.",
+
+  description:
+    "Layanan laundry premium dengan standar kebersihan tinggi, pengerjaan tepat waktu, dan kualitas terbaik.",
+
+  openGraph: {
+    title: "Laundry Care+ | Lebih Dari Sekadar Bersih",
+
+    description:
+      "Layanan laundry premium dengan standar kebersihan tinggi, pengerjaan tepat waktu, dan kualitas terbaik.",
+
+    url: "https://laundrycare.id",
+
+    siteName: "Laundry Care+",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Laundry Care+",
+      },
+    ],
+
+    locale: "id_ID",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Laundry Care+ | Lebih Dari Sekadar Bersih",
+    description:
+      "Layanan laundry premium dengan standar kebersihan tinggi, pengerjaan tepat waktu, dan kualitas terbaik.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -23,17 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="id">
+      <body>{children}</body>
     </html>
   );
 }
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-});
-<body className={inter.className}></body>
