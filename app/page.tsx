@@ -11,17 +11,23 @@ import Footer from "@/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+<main className="bg-[#002248]">
       <Navbar />
 
       <Hero />
-      <Stats />
-      <Services />
-      <Care />
-      <Testimonials />
-      <FAQ />
-      <Footer />
 
+      <Stats />
+      
+      <Care />
+      
+      <Services />
+      
+      <Testimonials />
+      
+      <FAQ />
+      
+      <Footer />
+      
       <WhatsAppButton />
     </main>
   );

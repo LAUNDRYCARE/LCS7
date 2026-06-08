@@ -1,30 +1,69 @@
 export default function Stats() {
+  const stats = [
+    {
+      value: "100.000+",
+      label: "Kg Cucian",
+    },
+    {
+      value: "5000+",
+      label: "Pelanggan",
+    },
+    {
+      value: "99%",
+      label: "Tepat Waktu",
+    },
+    {
+      value: "4.9★",
+      label: "Rating",
+    },
+  ];
+
   return (
-    <section className="py-20">
+    <section className="bg-[#002248] pb-32 px-6">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div
+          className="
+          grid
+          md:grid-cols-4
+          gap-6"
+        >
 
-          <div className="bg-slate-900 p-8 rounded-3xl">
-            <h2 className="text-4xl font-bold text-blue-400">10.000+</h2>
-            <p className="text-gray-400 mt-2">Pelanggan</p>
-          </div>
+          {stats.map((item) => (
+            <div
+              key={item.label}
+              className="
+              bg-white/10
+              backdrop-blur-xl
+              border
+              border-white/10
+              rounded-3xl
+              p-10
+              text-center
+              hover:border-[#64C3F1]
+              duration-300"
+            >
 
-          <div className="bg-slate-900 p-8 rounded-3xl">
-            <h2 className="text-4xl font-bold text-blue-400">99%</h2>
-            <p className="text-gray-400 mt-2">Tepat Waktu</p>
-          </div>
+              <h2
+                className="
+                text-4xl
+                font-bold
+                text-[#64C3F1]"
+              >
+                {item.value}
+              </h2>
 
-          <div className="bg-slate-900 p-8 rounded-3xl">
-            <h2 className="text-4xl font-bold text-blue-400">24 Jam</h2>
-            <p className="text-gray-400 mt-2">Express Service</p>
-          </div>
+              <p
+                className="
+                mt-3
+                text-slate-300"
+              >
+                {item.label}
+              </p>
 
-          <div className="bg-slate-900 p-8 rounded-3xl">
-            <h2 className="text-4xl font-bold text-blue-400">100%</h2>
-            <p className="text-gray-400 mt-2">Kepuasan Pelanggan</p>
-          </div>
+            </div>
+          ))}
 
         </div>
 
