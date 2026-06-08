@@ -1,94 +1,135 @@
 import {
-  ShieldCheck,
   Sparkles,
-  Clock3,
-  Truck,
+  Target,
+  ShieldCheck,
+  Zap,
   HeartHandshake,
-  BadgeCheck,
 } from "lucide-react";
 
 export default function Care() {
-  const advantages = [
-    {
-      icon: ShieldCheck,
-      title: "Higienis & Aman",
-      desc: "Proses pencucian dengan standar kebersihan tinggi untuk menjaga kualitas pakaian Anda.",
-    },
+  const values = [
     {
       icon: Sparkles,
-      title: "Bersih Maksimal",
-      desc: "Menggunakan deterjen dan parfum premium dengan hasil bersih dan wangi tahan lama.",
+      symbol: "C",
+      title: "Clean",
+      subtitle: "Bersih Maksimal",
+      desc: "Setiap pakaian diproses dengan standar kebersihan tinggi menggunakan deterjen dan parfum premium untuk menghasilkan cucian yang bersih, segar, dan nyaman digunakan.",
     },
+
     {
-      icon: Clock3,
-      title: "Tepat Waktu",
-      desc: "Pengerjaan sesuai estimasi sehingga pakaian siap digunakan saat dibutuhkan.",
+      icon: Target,
+      symbol: "A",
+      title: "Accurate",
+      subtitle: "Tepat & Teliti",
+      desc: "Setiap pesanan diperiksa dan diproses dengan perhatian terhadap detail untuk memastikan hasil yang sesuai dengan harapan pelanggan.",
     },
+
     {
-      icon: Truck,
-      title: "Gratis Antar Jemput",
-      desc: "Layanan antar jemput memudahkan aktivitas Anda tanpa harus keluar rumah.",
+      icon: ShieldCheck,
+      symbol: "R",
+      title: "Reliable",
+      subtitle: "Dapat Diandalkan",
+      desc: "Komitmen kami adalah memberikan layanan yang konsisten, menjaga kualitas, dan menyelesaikan pesanan tepat waktu.",
     },
+
+    {
+      icon: Zap,
+      symbol: "E",
+      title: "Efficient",
+      subtitle: "Cepat & Efisien",
+      desc: "Proses kerja yang terorganisir memungkinkan pesanan selesai sesuai estimasi tanpa mengurangi kualitas hasil cucian.",
+    },
+
     {
       icon: HeartHandshake,
-      title: "Pelayanan Ramah",
-      desc: "Tim Laundry Care+ selalu siap memberikan pelayanan yang cepat dan profesional.",
-    },
-    {
-      icon: BadgeCheck,
-      title: "Kualitas Terjamin",
-      desc: "Setiap pesanan diproses dengan perhatian dan pemeriksaan kualitas sebelum diserahkan.",
+      symbol: "+",
+      title: "Plus",
+      subtitle: "Lebih Dari Sekadar Bersih",
+      desc: "Kami memberikan nilai tambah melalui pelayanan ramah, kualitas premium, standar higienis, serta layanan antar jemput untuk kenyamanan pelanggan.",
     },
   ];
 
   return (
     <section
       id="care"
-      className="py-24 bg-slate-50"
+      className="bg-white py-28"
     >
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-16">
+        {/* Heading */}
 
-          <span className="text-[#096FDE] font-semibold uppercase tracking-widest">
-            C.A.R.E.+
+        <div className="text-center mb-20">
+
+          <span className="text-[#096FDE] font-semibold uppercase tracking-[0.3em]">
+            Filosofi Brand
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-[#002248] mt-4">
-            Kenapa Memilih Laundry Care+
+          <h2 className="mt-5 text-4xl md:text-6xl font-bold text-[#002248]">
+            C.A.R.E.+
           </h2>
 
-          <p className="max-w-3xl mx-auto mt-5 text-gray-600 text-lg leading-relaxed">
-            Kami menghadirkan layanan laundry modern dengan kualitas terbaik,
-            proses yang higienis, serta pelayanan yang mengutamakan kepuasan pelanggan.
+          <p className="max-w-3xl mx-auto mt-8 text-lg text-gray-600 leading-relaxed">
+            C.A.R.E.+ bukan sekadar nama, tetapi komitmen kami dalam
+            memberikan layanan laundry yang bersih, tepat, dapat
+            diandalkan, efisien, dan selalu memberikan lebih bagi setiap
+            pelanggan.
           </p>
 
         </div>
 
+        {/* Cards */}
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {advantages.map((item, index) => {
+          {values.map((item, index) => {
             const Icon = item.icon;
 
             return (
               <div
                 key={index}
-                className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl transition duration-300"
+                className="
+                bg-slate-50
+                rounded-[32px]
+                p-10
+                shadow-sm
+                hover:shadow-2xl
+                hover:-translate-y-2
+                duration-300"
               >
-                <div className="w-16 h-16 rounded-2xl bg-[#096FDE]/10 flex items-center justify-center mb-6">
 
-                  <Icon
-                    size={30}
-                    className="text-[#096FDE]"
-                  />
+                <div className="flex items-center justify-between">
+
+                  <div
+                    className="
+                    w-16
+                    h-16
+                    rounded-2xl
+                    bg-[#096FDE]/10
+                    flex
+                    items-center
+                    justify-center"
+                  >
+                    <Icon
+                      size={30}
+                      className="text-[#096FDE]"
+                    />
+                  </div>
+
+                  <div className="text-5xl font-bold text-[#64C3F1]">
+                    {item.symbol}
+                  </div>
 
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#002248] mb-4">
+                <h3 className="mt-8 text-3xl font-bold text-[#002248]">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed">
+                <h4 className="mt-3 text-[#096FDE] font-semibold">
+                  {item.subtitle}
+                </h4>
+
+                <p className="mt-6 text-gray-600 leading-8">
                   {item.desc}
                 </p>
 

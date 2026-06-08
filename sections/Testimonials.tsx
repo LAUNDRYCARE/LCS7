@@ -8,7 +8,7 @@ export default function Testimonials() {
     },
     {
       name: "Atri",
-      text: "Karyawannya ramah, dan cucinya cepat, pokoknya mantapKaryawannya ramah, dan cucinya cepat, pokoknya mantap 👌",
+      text: "Karyawannya ramah, dan cucinya cepat, pokoknya mantap 👌",
     },
     {
       name: "Rizky",
