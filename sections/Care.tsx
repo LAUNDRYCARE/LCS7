@@ -1,106 +1,100 @@
+import {
+  ShieldCheck,
+  Sparkles,
+  Clock3,
+  Truck,
+  HeartHandshake,
+  BadgeCheck,
+} from "lucide-react";
+
 export default function Care() {
-  const items = [
+  const advantages = [
     {
-      title: "Clean",
-      symbol: "C",
-      desc: "Kebersihan maksimal dengan standar pencucian modern.",
+      icon: ShieldCheck,
+      title: "Higienis & Aman",
+      desc: "Proses pencucian dengan standar kebersihan tinggi untuk menjaga kualitas pakaian Anda.",
     },
     {
-      title: "Accurate",
-      symbol: "A",
-      desc: "Setiap proses dilakukan secara teliti dan terukur.",
+      icon: Sparkles,
+      title: "Bersih Maksimal",
+      desc: "Menggunakan deterjen dan parfum premium dengan hasil bersih dan wangi tahan lama.",
     },
     {
-      title: "Reliable",
-      symbol: "R",
-      desc: "Pelayanan terpercaya dengan kualitas yang konsisten.",
+      icon: Clock3,
+      title: "Tepat Waktu",
+      desc: "Pengerjaan sesuai estimasi sehingga pakaian siap digunakan saat dibutuhkan.",
     },
     {
-      title: "Efficient",
-      symbol: "E",
-      desc: "Cepat, efisien, dan tepat waktu.",
+      icon: Truck,
+      title: "Gratis Antar Jemput",
+      desc: "Layanan antar jemput memudahkan aktivitas Anda tanpa harus keluar rumah.",
     },
     {
-      title: "Plus Service",
-      symbol: "+",
-      desc: "Pelayanan ramah serta perhatian terhadap setiap detail.",
+      icon: HeartHandshake,
+      title: "Pelayanan Ramah",
+      desc: "Tim Laundry Care+ selalu siap memberikan pelayanan yang cepat dan profesional.",
+    },
+    {
+      icon: BadgeCheck,
+      title: "Kualitas Terjamin",
+      desc: "Setiap pesanan diproses dengan perhatian dan pemeriksaan kualitas sebelum diserahkan.",
     },
   ];
 
   return (
     <section
-      id="keunggulan"
-      className="bg-[#002248] py-32 px-6"
+      id="care"
+      className="py-24 bg-slate-50"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
 
-          <h2 className="text-5xl font-bold text-white">
+          <span className="text-[#096FDE] font-semibold uppercase tracking-widest">
             C.A.R.E.+
+          </span>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-[#002248] mt-4">
+            Kenapa Memilih Laundry Care+
           </h2>
 
-          <p className="mt-6 text-slate-300 max-w-2xl mx-auto">
-            Filosofi pelayanan yang menjadi standar kualitas
-            LAUNDRY CARE+ dalam setiap proses.
+          <p className="max-w-3xl mx-auto mt-5 text-gray-600 text-lg leading-relaxed">
+            Kami menghadirkan layanan laundry modern dengan kualitas terbaik,
+            proses yang higienis, serta pelayanan yang mengutamakan kepuasan pelanggan.
           </p>
 
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {items.map((item) => (
-            <div
-              key={item.title}
-              className="
-              bg-white/10
-              backdrop-blur-xl
-              border
-              border-white/10
-              rounded-3xl
-              p-10
-              hover:border-[#64C3F1]
-              hover:-translate-y-2
-              duration-300"
-            >
+          {advantages.map((item, index) => {
+            const Icon = item.icon;
 
+            return (
               <div
-                className="
-                w-16
-                h-16
-                rounded-2xl
-                bg-[#096FDE]
-                flex
-                items-center
-                justify-center
-                text-white
-                text-3xl
-                font-bold"
+                key={index}
+                className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl transition duration-300"
               >
-                {item.symbol}
+                <div className="w-16 h-16 rounded-2xl bg-[#096FDE]/10 flex items-center justify-center mb-6">
+
+                  <Icon
+                    size={30}
+                    className="text-[#096FDE]"
+                  />
+
+                </div>
+
+                <h3 className="text-2xl font-bold text-[#002248] mb-4">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  {item.desc}
+                </p>
+
               </div>
-
-              <h3
-                className="
-                mt-8
-                text-3xl
-                text-white
-                font-bold"
-              >
-                {item.title}
-              </h3>
-
-              <p
-                className="
-                mt-5
-                text-slate-300
-                leading-8"
-              >
-                {item.desc}
-              </p>
-
-            </div>
-          ))}
+            );
+          })}
 
         </div>
 

@@ -9,15 +9,20 @@ export default function WhatsAppButton() {
       fixed
       bottom-8
       right-8
-      bg-green-500
-      p-4
+      w-16
+      h-16
       rounded-full
-      shadow-xl
-      hover:scale-110
-      transition
+      bg-green-500
+      flex
+      items-center
+      justify-center
+      shadow-2xl
       z-50"
     >
-      <MessageCircle size={30} color="white" />
+      <MessageCircle
+        size={32}
+        className="text-white"
+      />
     </a>
   );
 }
