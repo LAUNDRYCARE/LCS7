@@ -2,10 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://laundrycare.id"),
+
   title: "Laundry Care+ | Lebih Dari Sekadar Bersih",
 
   description:
     "Layanan laundry premium dengan standar kebersihan tinggi, pengerjaan tepat waktu, dan kualitas terbaik.",
+
+  keywords: [
+    "Laundry Care",
+    "Laundry Care+",
+    "Laundry Makassar",
+    "Laundry Soppeng",
+    "Laundry Kiloan",
+    "Laundry Express",
+    "Laundry Antar Jemput",
+  ],
 
   openGraph: {
     title: "Laundry Care+ | Lebih Dari Sekadar Bersih",
@@ -27,14 +39,18 @@ export const metadata: Metadata = {
     ],
 
     locale: "id_ID",
+
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
+
     title: "Laundry Care+ | Lebih Dari Sekadar Bersih",
+
     description:
       "Layanan laundry premium dengan standar kebersihan tinggi, pengerjaan tepat waktu, dan kualitas terbaik.",
+
     images: ["/og-image.jpg"],
   },
 };
