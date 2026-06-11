@@ -8,11 +8,13 @@ import { links } from "@/data/links";
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-6 py-10"
-style={{
-  background:
-    "linear-gradient(180deg, #FFFFFF 0%, #EAF6FF 100%)",
-}}>
+    <main
+      className="min-h-screen px-6 py-10"
+      style={{
+        background:
+          "linear-gradient(180deg, #FFFFFF 0%, #EAF6FF 100%)",
+      }}
+    >
       <div className="mx-auto max-w-md">
         <div className="rounded-[40px] border border-white/40 bg-white/70 p-8 shadow-2xl backdrop-blur-xl">
           <Profile />

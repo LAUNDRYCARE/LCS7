@@ -3,10 +3,12 @@ import type { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-return [
-{
-url: "https://soppeng.laundrycare.id",
-lastModified: new Date(),
-},
-];
+  return [
+    {
+      url: "https://soppeng.laundrycare.id",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+  ];
 }
