@@ -1,39 +1,172 @@
 import type { Metadata } from "next";
 
+import {
+  Shirt,
+  Sparkles,
+  Flower2,
+  Clock3,
+  Truck,
+} from "lucide-react";
+
+import FeatureCard from "@/components/FeatureCard";
+import TestimonialSection from "@/components/TestimonialSection";
+import CTASection from "@/components/CTASection";
+
 export const metadata: Metadata = {
   title: "Laundry Kiloan Soppeng | Laundry Care+",
   description:
-    "Laundry kiloan terpercaya di Soppeng dengan hasil bersih, wangi, dan rapi.",
+    "Laundry kiloan di Soppeng dengan harga mulai Rp7.000/kg. Bersih, wangi, rapi, dan tersedia layanan antar jemput.",
 };
 
-export default function Page() {
+export default function LaundryKiloanPage() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-6">
-        Laundry Kiloan Soppeng
-      </h1>
+    <main
+      className="min-h-screen px-6 py-12"
+      style={{
+        background:
+          "linear-gradient(180deg, #FFFFFF 0%, #EAF6FF 100%)",
+      }}
+    >
+      <div className="mx-auto max-w-6xl">
 
-      <p className="text-gray-700 leading-8">
-        Laundry Care+ merupakan pilihan terbaik untuk laundry kiloan
-        di Kabupaten Soppeng.
-      </p>
+        {/* Hero */}
+        <section className="text-center">
+          <h1 className="text-5xl font-bold text-[#002248]">
+            Laundry Kiloan Soppeng
+          </h1>
 
-      <p className="mt-6 leading-8">
-        Dengan proses pencucian modern dan deterjen berkualitas,
-        pakaian menjadi lebih bersih, higienis, dan wangi tahan lama.
-      </p>
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
+            Laundry Care+ Soppeng melayani laundry kiloan dengan
+            harga mulai Rp4.000/kg, hasil bersih maksimal,
+            wangi tahan lama, dan siap pakai.
+          </p>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Mengapa Memilih Laundry Care+?
-      </h2>
+          <a
+            href="https://wa.me/6285188220007"
+            target="_blank"
+            className="mt-8 inline-block rounded-full bg-green-600 px-8 py-4 font-bold text-white shadow-xl transition hover:bg-green-700"
+          >
+            📲 Pesan via WhatsApp
+          </a>
+        </section>
 
-      <ul className="space-y-3">
-        <li>✓ Bersih maksimal</li>
-        <li>✓ Wangi tahan lama</li>
-        <li>✓ Rapi siap pakai</li>
-        <li>✓ Tepat waktu</li>
-        <li>✓ Gratis antar jemput</li>
-      </ul>
+        {/* Keunggulan */}
+        <section className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+          <FeatureCard
+            icon={<Sparkles size={32} />}
+            title="Bersih Maksimal"
+            description="Pencucian higienis dengan kualitas terbaik."
+          />
+
+          <FeatureCard
+            icon={<Flower2 size={32} />}
+            title="Wangi Tahan Lama"
+            description="Menggunakan pewangi premium pilihan."
+          />
+
+          <FeatureCard
+            icon={<Clock3 size={32} />}
+            title="Tepat Waktu"
+            description="Estimasi pengerjaan yang jelas."
+          />
+
+          <FeatureCard
+            icon={<Truck size={32} />}
+            title="Gratis Antar Jemput"
+            description="Lebih praktis dan hemat waktu."
+          />
+
+        </section>
+
+        {/* Harga */}
+        <section className="mt-20">
+          <div className="rounded-3xl bg-white p-10 shadow-xl">
+
+            <h2 className="text-3xl font-bold text-[#002248]">
+              Harga Laundry Kiloan
+            </h2>
+
+            <p className="mt-4 text-gray-500">
+              Harga laundry kiloan reguler mulai:
+            </p>
+
+            <div className="mt-8 flex items-center gap-4">
+              <Shirt size={40} className="text-sky-600" />
+
+              <div>
+                <div className="text-gray-500">
+                  Laundry Reguler
+                </div>
+
+                <div className="text-4xl font-bold text-[#002248]">
+                  Rp4.000/kg
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Cara Kerja */}
+        <section className="mt-20">
+
+          <h2 className="mb-8 text-3xl font-bold text-[#002248]">
+            Cara Pemesanan
+          </h2>
+
+          <div className="grid gap-6 md:grid-cols-3">
+
+            <div className="rounded-3xl bg-white p-8 shadow-lg">
+              <div className="text-5xl font-bold text-sky-600">
+                1
+              </div>
+
+              <h3 className="mt-4 text-xl font-bold">
+                Hubungi Kami
+              </h3>
+
+              <p className="mt-3 text-gray-500">
+                Pesan melalui WhatsApp atau datang langsung ke outlet.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-lg">
+              <div className="text-5xl font-bold text-sky-600">
+                2
+              </div>
+
+              <h3 className="mt-4 text-xl font-bold">
+                Proses Pencucian
+              </h3>
+
+              <p className="mt-3 text-gray-500">
+                Pakaian dicuci, dikeringkan, dan dirapikan dengan standar C.A.R.E.+.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-lg">
+              <div className="text-5xl font-bold text-sky-600">
+                3
+              </div>
+
+              <h3 className="mt-4 text-xl font-bold">
+                Siap Dipakai
+              </h3>
+
+              <p className="mt-3 text-gray-500">
+                Pakaian bersih, wangi, dan siap digunakan kembali.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <TestimonialSection />
+
+        <CTASection />
+
+      </div>
     </main>
   );
 }

@@ -2,62 +2,104 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://soppeng.laundrycare.id"),
+metadataBase: new URL("https://soppeng.laundrycare.id"),
 
-  title: "Laundry Care+ Soppeng | Laundry Kiloan & Express",
+title: "Laundry Care+ Soppeng | Laundry Kiloan & Express",
 
-  description:
-    "Laundry Care+ Soppeng melayani laundry kiloan, satuan, dan express. Gratis antar jemput. Buka setiap hari pukul 07.00–22.00.",
+description:
+"Laundry Care+ Soppeng melayani laundry kiloan, express, satuan, dan antar jemput. Buka setiap hari pukul 07.00–22.00.",
 
-  keywords: [
-    "Laundry Soppeng",
-    "Laundry Care Soppeng",
-    "Laundry kiloan Soppeng",
-    "Laundry express Soppeng",
-    "Laundry antar jemput Soppeng",
-  ],
+keywords: [
+"Laundry Soppeng",
+"Laundry Kiloan Soppeng",
+"Laundry Express Soppeng",
+"Laundry Antar Jemput Soppeng",
+"Laundry Care Soppeng",
+],
 
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+icons: {
+icon: "/favicon.ico",
+shortcut: "/favicon.ico",
+apple: "/favicon.ico",
+},
+
+openGraph: {
+title: "Laundry Care+ Soppeng",
+
+description:
+  "Laundry kiloan, express, dan antar jemput dengan standar C.A.R.E.+",
+
+url: "https://soppeng.laundrycare.id",
+
+siteName: "Laundry Care+ Soppeng",
+
+images: [
+  {
+    url: "/logo.png",
+    width: 512,
+    height: 512,
+    alt: "Laundry Care+ Soppeng",
   },
+],
 
-  openGraph: {
-    title: "Laundry Care+ Soppeng",
-    description:
-      "Laundry kiloan, satuan, dan express dengan standar C.A.R.E.+",
-    url: "https://soppeng.laundrycare.id",
-    siteName: "Laundry Care+ Soppeng",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Laundry Care+ Soppeng",
-      },
-    ],
-    locale: "id_ID",
-    type: "website",
-  },
+locale: "id_ID",
+type: "website",
 
-  twitter: {
-    card: "summary_large_image",
-    title: "Laundry Care+ Soppeng",
-    description:
-      "Laundry kiloan, satuan, dan express dengan standar C.A.R.E.+",
-    images: ["/og-image.jpg"],
-  },
+},
 };
 
 export default function RootLayout({
-  children,
+children,
 }: Readonly<{
-  children: React.ReactNode;
+children: React.ReactNode;
 }>) {
-  return (
-    <html lang="id">
-      <body>{children}</body>
-    </html>
-  );
+return ( <html lang="id"><body>
+<script
+type="application/ld+json"
+dangerouslySetInnerHTML={{
+__html: JSON.stringify({
+"@context": "https://schema.org",
+"@type": "DryCleaningOrLaundry",
+
+
+          name: "Laundry Care+ Soppeng",
+
+          image: "https://soppeng.laundrycare.id/logo.png",
+
+          url: "https://soppeng.laundrycare.id",
+
+          telephone: "+6285188220007",
+
+          priceRange: "Rp4.000 - Rp20.000",
+
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Jl. Malaka Raya, Soppeng",
+            addressRegion: "Sulawesi Selatan",
+            addressCountry: "ID",
+          },
+
+          openingHours: "Mo-Su 07:00-22:00",
+
+          areaServed: [
+            "Lalabata",
+            "Cabbenge",
+            "Marioriawa",
+            "Marioriwawo",
+            "Liliriaja",
+          ],
+
+          sameAs: [
+            "https://instagram.com/laundrycare.id",
+          ],
+        }),
+      }}
+    />
+
+    {children}
+  </body>
+</html>
+
+
+);
 }
